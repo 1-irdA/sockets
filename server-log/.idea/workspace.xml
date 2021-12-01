@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="485649e7-f9f3-481a-9e4c-9b78ed74e8b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../client-udp/.idea/libraries/Maven__fr_adrien_socket_bll_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/_1irda/sockets/models/TcpLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/ClientLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-tcp/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-tcp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-tcp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-udp/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-udp/client-udp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/client-udp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-udp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/src/main/java/_1irda/socket/models/TcpAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/src/main/java/_1irda/socket/models/TcpAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/enums/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="21ecpYDZHtFSRId9P1B3v2JRi3c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="485649e7-f9f3-481a-9e4c-9b78ed74e8b4" name="Changes" comment="" />
+      <created>1638305180059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638305180059</updated>
+      <workItem from="1638305181329" duration="20000" />
+      <workItem from="1638305248811" duration="1227000" />
+      <workItem from="1638349236089" duration="3971000" />
+      <workItem from="1638367813692" duration="26000" />
+      <workItem from="1638368616091" duration="134000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

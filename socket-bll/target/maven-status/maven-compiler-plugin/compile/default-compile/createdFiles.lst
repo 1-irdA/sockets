@@ -1,3 +1,6 @@
 _1irda\socket\models\ListAuth.class
-_1irda\socket\enums\Response.class
 _1irda\socket\models\Analyzer.class
+_1irda\socket\models\User.class
+_1irda\socket\enums\Status.class
+_1irda\socket\models\AuthResponse.class
+_1irda\socket\models\Response.class

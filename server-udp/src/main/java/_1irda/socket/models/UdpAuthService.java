@@ -11,14 +11,11 @@ public class UdpAuthService implements Runnable {
 
     private DatagramSocket socket;
 
-    private boolean isManager;
-
     private int port;
 
     private Analyzer analyzer;
 
-    public UdpAuthService(boolean isManager, int port, Analyzer analyzer) {
-        this.isManager = isManager;
+    public UdpAuthService(int port, Analyzer analyzer) {
         this.port = port;
         this.analyzer = analyzer;
     }
@@ -51,7 +48,7 @@ public class UdpAuthService implements Runnable {
                     Request request = receive();
 
                     /* extract data and check */
-                    String result = this.analyzer.checkCommand(request.getPayload(), isManager);
+                    String result = this.analyzer.checkCommand(request.getPayload());
 
                     send(result, request.getAddress(), request.getPort());
                 }

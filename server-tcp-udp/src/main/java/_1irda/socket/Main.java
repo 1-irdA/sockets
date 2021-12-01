@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Analyzer analyzer = new Analyzer(new ListAuth());
-        Server server = new Server(40000, true, analyzer);
+        Server server = new Server(40000, analyzer);
         server.listen();
     }
 }

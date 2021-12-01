@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Analyzer analyzer = new Analyzer(new ListAuth());
-        UdpAuthService authService = new UdpAuthService(true,40000, analyzer);
+        UdpAuthService authService = new UdpAuthService(40000, analyzer);
         authService.listen();
     }
 }

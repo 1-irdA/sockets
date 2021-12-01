@@ -1,5 +1,7 @@
 package _1irda.socket.models;
 
+import _1irda.socket.enums.Status;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,19 +29,27 @@ public class Client {
             Socket socket = new Socket(host, port);
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintStream output = new PrintStream(socket.getOutputStream());
+            User user = new User("");
 
-            System.out.println("Input sentences or 'stop'" );
+            System.out.println("Input sentences or 'stop'");
 
             do {
                 System.out.print("> " );
                 data = scanner.nextLine();
 
-                // send input to server
-                if (!data.equalsIgnoreCase("stop" )) {
+                /* send input to server */
+                if (!data.equalsIgnoreCase("stop")) {
+                    data = buildPayload(data, user);
                     output.println(data);
 
-                    // read server data and print
-                    System.out.println(read(input));
+                    /* read server data and print */
+                    Response response = new Response(read(input));
+
+                    /* set username if response if 'GOOD' (only on auth) */
+                    if (response.getStatus().equals(Status.GOOD.getValue())) {
+                        user.setUsername(response.getUsername());
+                    }
+                    System.out.println(response);
                 }
             } while (!data.equalsIgnoreCase("stop" ));
 
@@ -61,5 +71,14 @@ public class Client {
             System.err.println(e.getMessage());
         }
         return data;
+    }
+
+    private String buildPayload(String input, User user) {
+        return new StringBuilder()
+                .append(input)
+                .append(" ")
+                .append("token:")
+                .append(user.getUsername())
+                .toString();
     }
 }

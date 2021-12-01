@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Analyzer analyzer = new Analyzer(new ListAuth());
-        TcpAuthService service = new TcpAuthService(true, 40000, analyzer);
+        TcpAuthService service = new TcpAuthService(40000, analyzer);
         service.listen();
     }
 }

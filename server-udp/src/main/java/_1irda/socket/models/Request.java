@@ -4,10 +4,19 @@ import java.net.InetAddress;
 
 public class Request {
 
+    /**
+     * Data
+     */
     private String payload;
 
+    /**
+     * Address to respond
+     */
     private InetAddress address;
 
+    /**
+     * Port to respond
+     */
     private int port;
 
     public Request(String payload, InetAddress address, int port) {
@@ -20,23 +29,11 @@ public class Request {
         return payload;
     }
 
-    public void setPayload(String payload) {
-        this.payload = payload;
-    }
-
     public InetAddress getAddress() {
         return address;
     }
 
-    public void setAddress(InetAddress address) {
-        this.address = address;
-    }
-
     public int getPort() {
         return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
     }
 }

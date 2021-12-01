@@ -1,5 +1,7 @@
 package _1irda.socket.models;
 
+import _1irda.socket.enums.Status;
+
 import java.net.*;
 import java.util.Scanner;
 
@@ -37,6 +39,7 @@ public class Client {
             socket = new DatagramSocket();
             DatagramPacket reception = new DatagramPacket(buffer, buffer.length);
             InetAddress destination = InetAddress.getByName(dest);
+            User user = new User("");
 
             System.out.println("Input sentences or 'stop' : ");
 
@@ -48,13 +51,21 @@ public class Client {
 
                 if (!data.equalsIgnoreCase(("stop"))) {
 
+                    byte[] payload = buildPayload(data, user);
+
                     /* get bytes and send data */
-                    send(data.getBytes(), destination);
+                    send(payload, destination);
 
                     /* wait and receive server data */
                     socket.receive(reception);
 
-                    System.out.println(extractReceivedData(reception));
+                    Response response = new Response(extractReceivedData(reception));
+
+                    /* set username if response if 'GOOD' (only on auth) */
+                    if (response.getStatus().equals(Status.GOOD.getValue())) {
+                        user.setUsername(response.getUsername());
+                    }
+                    System.out.println(response);
 
                     /*
                      * replace buffer size at max
@@ -67,5 +78,15 @@ public class Client {
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    private byte[] buildPayload(String input, User user) {
+        return new StringBuilder()
+                .append(input)
+                .append(" ")
+                .append("token:")
+                .append(user.getUsername())
+                .toString()
+                .getBytes();
     }
 }

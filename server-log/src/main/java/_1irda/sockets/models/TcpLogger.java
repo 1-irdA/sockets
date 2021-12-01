@@ -1,4 +1,6 @@
-package _1irda.socket.models;
+package _1irda.sockets.models;
+
+import _1irda.socket.models.Analyzer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,13 +9,13 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TcpAuthService implements Runnable {
+public class TcpLogger {
 
     private final Analyzer analyzer;
 
     private final int port;
 
-    public TcpAuthService(int port, Analyzer analyzer) {
+    public TcpLogger(int port, Analyzer analyzer) {
         this.port = port;
         this.analyzer = analyzer;
     }
@@ -36,7 +38,7 @@ public class TcpAuthService implements Runnable {
 
                         if (request != null) {
                             /* get response */
-                            String response = analyzer.checkCommand(request);
+                            String response = ""; // TODO
 
                             /* send response */
                             output.println(response);
@@ -50,10 +52,5 @@ public class TcpAuthService implements Runnable {
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
-    }
-
-    @Override
-    public void run() {
-        listen();
     }
 }
