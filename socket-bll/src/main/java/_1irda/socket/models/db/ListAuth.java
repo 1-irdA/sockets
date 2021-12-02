@@ -1,4 +1,4 @@
-package _1irda.socket.models;
+package _1irda.socket.models.db;
 
 import java.util.HashMap;
 

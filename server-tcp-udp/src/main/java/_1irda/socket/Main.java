@@ -1,6 +1,6 @@
 package _1irda.socket;
 
-import _1irda.socket.models.ListAuth;
+import _1irda.socket.models.db.ListAuth;
 import _1irda.socket.models.Server;
 import _1irda.socket.models.Analyzer;
 

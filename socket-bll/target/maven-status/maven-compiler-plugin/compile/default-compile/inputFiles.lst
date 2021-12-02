@@ -1,6 +1,8 @@
+C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\communication\Request.java
 C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\Analyzer.java
-C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\Response.java
 C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\User.java
-C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\ListAuth.java
+C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\logger\Log.java
+C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\logger\JsonLogger.java
+C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\communication\Response.java
 C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\enums\Status.java
-C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\AuthResponse.java
+C:\M1\S7\Réseaux\socket-bll\src\main\java\_1irda\socket\models\db\ListAuth.java

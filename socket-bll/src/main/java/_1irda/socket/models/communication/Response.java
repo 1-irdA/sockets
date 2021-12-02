@@ -1,33 +1,37 @@
-package _1irda.socket.models;
+package _1irda.socket.models.communication;
 
 import _1irda.socket.enums.Status;
 
 /**
- * Response class used by client
+ * Response class
  */
 public class Response {
 
     /**
      * Response status
      */
-    private final String status;
+    private String status;
 
     /**
      * Token
      */
-    private final String username;
+    private String username;
 
     /**
      * @param data status + [error message] + [token]
      */
     public Response(String data) {
+        String[] items = data.split(" ");
+        status = data;
+        username = "";
+
         if (data.contains(Status.GOOD.getValue())) {
-            String[] items = data.split(" ");
+            if (items.length == 2) {
+                status = items[0];
+                username = items[1];
+            }
+        } else if (data.contains(Status.BAD.getValue())) {
             status = items[0];
-            username = items[1];
-        } else {
-            status = data;
-            username = "";
         }
     }
 
@@ -41,6 +45,6 @@ public class Response {
 
     @Override
     public String toString() {
-        return status;
+        return status + " " + username;
     }
 }

@@ -5,36 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="485649e7-f9f3-481a-9e4c-9b78ed74e8b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../client-udp/.idea/libraries/Maven__fr_adrien_socket_bll_1_0_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_1irda/sockets/models/TcpLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/ClientLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-tcp/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-tcp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/src/main/java/_1irda/socket/models/ClientLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-log/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_json_api_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server-tcp/.idea/libraries/Maven__fr_adrien_client_log_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/.idea/libraries/javax_json_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/logger/JsonLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/logger/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-tcp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/client-udp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/client-udp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_1irda/sockets/models/TcpLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1irda/sockets/models/TcpLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/ClientLog.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/server-tcp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/server-tcp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-tcp/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-tcp/src/main/java/_1irda/socket/models/TcpAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/src/main/java/_1irda/socket/models/TcpAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-udp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-udp/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpAuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/enums/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/enums/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/ListAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/db/ListAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -53,20 +60,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21ecpYDZHtFSRId9P1B3v2JRi3c" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javax.json-api-1.1.4.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="server-log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,6 +117,7 @@
       <workItem from="1638349236089" duration="3971000" />
       <workItem from="1638367813692" duration="26000" />
       <workItem from="1638368616091" duration="134000" />
+      <workItem from="1638397316346" duration="5413000" />
     </task>
     <servers />
   </component>
@@ -97,5 +134,24 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_1irda/sockets/models/TcpLogger.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/fr/adrien/socket-bll/1.0-SNAPSHOT/socket-bll-1.0-SNAPSHOT.jar!/_1irda/socket/models/logger/JsonLogger.class</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

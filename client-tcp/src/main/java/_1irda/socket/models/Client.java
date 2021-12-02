@@ -1,6 +1,7 @@
 package _1irda.socket.models;
 
 import _1irda.socket.enums.Status;
+import _1irda.socket.models.communication.Response;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,9 +12,9 @@ import java.util.Scanner;
 
 public class Client {
 
-    private String host;
+    private final String host;
 
-    private int port;
+    private final int port;
 
     public Client(String host, int port) {
         this.host = host;
@@ -49,7 +50,7 @@ public class Client {
                     if (response.getStatus().equals(Status.GOOD.getValue())) {
                         user.setUsername(response.getUsername());
                     }
-                    System.out.println(response);
+                    System.out.println(response.getStatus());
                 }
             } while (!data.equalsIgnoreCase("stop" ));
 
@@ -74,11 +75,9 @@ public class Client {
     }
 
     private String buildPayload(String input, User user) {
-        return new StringBuilder()
-                .append(input)
-                .append(" ")
-                .append("token:")
-                .append(user.getUsername())
-                .toString();
+        return input +
+                " " +
+                "token:" +
+                user.getUsername();
     }
 }

@@ -1,8 +1,11 @@
 package _1irda.socket.models;
 
 import _1irda.socket.enums.Status;
+import _1irda.socket.models.communication.Response;
+import _1irda.socket.models.db.ListAuth;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Analyzer {
 
@@ -24,15 +27,6 @@ public class Analyzer {
     }
 
     /**
-     * Get the user command
-     * @param items split string (cmd username password token:{username})
-     * @return the user command
-     */
-    private String getCommand(String[] items) {
-        return items.length > 3 ? items[0] : "";
-    }
-
-    /**
      * Launch operation following command in string
      * @param data to analyse
      * @return the result of the operation or error
@@ -44,7 +38,7 @@ public class Analyzer {
         String result = error();
 
         if (command.equals("CHK")) {
-            result = new AuthResponse(checkLoginPassword(items), items[USERNAME]).toString();
+            result = new Response(checkLoginPassword(items) + " " + items[USERNAME]).toString();
         } else if (command.equals("ADD") && isManager) {
             result = addLoginPassword(items);
         } else if (command.equals("DEL") && isManager) {
@@ -56,15 +50,21 @@ public class Analyzer {
     }
 
     /**
+     * Get the command
+     * @param items split string (cmd username password token:{username})
+     * @return the user command
+     */
+    private String getCommand(String[] items) {
+        return items.length > 3 ? items[0] : "";
+    }
+
+    /**
      * Check if user is authenticated
      * @param items split string
      * @return true if logged, false else
      */
     private boolean isAuth(String[] items) {
-        String token = Arrays.stream(items)
-                .filter(i -> i.contains("token:"))
-                .findFirst()
-                .get();
+        String token = items.length == 4 ? items[items.length - 1] : "";
         String[] parts = token.split("token:");
         token = parts.length == 2 ? parts[1]: "";
         return !token.equals("");

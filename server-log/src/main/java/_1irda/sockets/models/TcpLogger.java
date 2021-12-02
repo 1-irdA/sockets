@@ -1,6 +1,7 @@
 package _1irda.sockets.models;
 
-import _1irda.socket.models.Analyzer;
+import _1irda.socket.models.logger.JsonLogger;
+import _1irda.socket.models.logger.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,13 +12,10 @@ import java.net.Socket;
 
 public class TcpLogger {
 
-    private final Analyzer analyzer;
-
     private final int port;
 
-    public TcpLogger(int port, Analyzer analyzer) {
+    public TcpLogger(int port) {
         this.port = port;
-        this.analyzer = analyzer;
     }
 
     public void listen() {
@@ -37,11 +35,14 @@ public class TcpLogger {
                         request = input.readLine();
 
                         if (request != null) {
-                            /* get response */
-                            String response = ""; // TODO
-
-                            /* send response */
-                            output.println(response);
+                            Log log = new Log(request.split(" "));
+                            JsonLogger.log(log.getHost(),
+                                    log.getPort(),
+                                    log.getProto(),
+                                    log.getType(),
+                                    log.getLogin(),
+                                    log.getResult());
+                            output.println("Success log");
                         }
                     }
                     socket.close();
