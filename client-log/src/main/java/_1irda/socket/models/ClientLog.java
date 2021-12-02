@@ -40,7 +40,7 @@ public class ClientLog {
                     " " +
                     request.getCommand() +
                     " " +
-                    response.getUsername() +
+                    request.getToken() +
                     " " +
                     response.getStatus();
 

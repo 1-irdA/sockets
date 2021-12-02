@@ -1,7 +1,6 @@
 package _1irda.sockets.models;
 
-import _1irda.socket.models.logger.JsonLogger;
-import _1irda.socket.models.logger.Log;
+import _1irda.socket.models.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +9,7 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TcpLogger {
+public class TcpLogger implements Runnable {
 
     private final int port;
 
@@ -30,20 +29,18 @@ public class TcpLogger {
                     PrintStream output = new PrintStream(socket.getOutputStream());
                     String request = "";
 
-                    while (request != null) {
+                    if (request != null) {
                         /* read client request */
                         request = input.readLine();
 
-                        if (request != null) {
-                            Log log = new Log(request.split(" "));
-                            JsonLogger.log(log.getHost(),
-                                    log.getPort(),
-                                    log.getProto(),
-                                    log.getType(),
-                                    log.getLogin(),
-                                    log.getResult());
-                            output.println("Success log");
-                        }
+                        Log log = new Log(request.split(" "));
+                        JsonLogger.log(log.getHost(),
+                                log.getPort(),
+                                log.getProto(),
+                                log.getType(),
+                                log.getLogin(),
+                                log.getResult());
+                        output.println("Success log");
                     }
                     socket.close();
                 } catch (IOException e) {
@@ -53,5 +50,10 @@ public class TcpLogger {
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    @Override
+    public void run() {
+        listen();
     }
 }

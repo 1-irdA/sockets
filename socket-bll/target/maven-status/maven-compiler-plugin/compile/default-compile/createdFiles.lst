@@ -1,0 +1,8 @@
+_1irda\socket\models\communication\Response.class
+_1irda\socket\models\Log.class
+_1irda\socket\models\Analyzer.class
+_1irda\socket\models\communication\Request.class
+_1irda\socket\models\db\ListAuth.class
+_1irda\socket\enums\Command.class
+_1irda\socket\models\User.class
+_1irda\socket\enums\Status.class

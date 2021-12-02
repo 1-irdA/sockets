@@ -1,5 +1,9 @@
 package _1irda.socket.models.communication;
 
+import _1irda.socket.enums.Command;
+
+import java.util.Arrays;
+
 /**
  * Request class
  */
@@ -30,21 +34,22 @@ public class Request {
 
         /* command login password token:{""|username} */
         if (items.length == 4) {
-            this.command = items[0];
+            this.command = Arrays.stream(Command.values())
+                    .map(c -> c.getValue())
+                    .toList()
+                    .contains(items[0]) ? items[0] : "";
             this.login = items[1];
             this.password = items[2];
             this.token = items[3];
-        } else if (items.length == 3) {
-            /* command login password */
-            this.command = items[0];
-            this.login = items[1];
-            this.password = items[2];
-            this.token = "";
         }
     }
 
     public String getCommand() {
         return command;
+    }
+
+    public String getToken() {
+        return token;
     }
 
     @Override

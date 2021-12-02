@@ -1,8 +1,7 @@
-package _1irda.socket.models.logger;
+package _1irda.sockets.models;
 
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.Date;
@@ -12,8 +11,6 @@ import java.util.Date;
  * Used by tcp and udp server
  */
 public class JsonLogger {
-
-    private static final Path path = Paths.get("../../logs.json");
 
     /**
      * Transform request to json
@@ -25,16 +22,17 @@ public class JsonLogger {
      * @param result operation result
      * @return a json object
      */
-    private JsonObject reqToJson(String host, int port, String proto, String type, String login, String result) {
-        JsonObjectBuilder builder = Json.createObjectBuilder();
-        builder.add("host", host)
-                .add("port", port)
-                .add("proto", proto)
-                .add("type", type)
-                .add("login", login)
-                .add("result", result)
-                .add("date", new Date().toString());
-        return builder.build();
+    private String reqToJson(String host, int port, String proto, String type, String login, String result) {
+        return new JSONObject()
+                .append("host", host)
+                .append("port", port)
+                .append("proto", proto)
+                .append("type", type)
+                .append("login", login)
+                .append("result", result)
+                .append("date", new Date().toString())
+                .toString()
+                + ",\n";
     }
 
     /**
@@ -64,7 +62,8 @@ public class JsonLogger {
      */
     public static void log(String host, int port, String proto, String type, String login, String result) throws IOException {
         JsonLogger logger = getLogger();
-        byte[] toWrite = logger.reqToJson(host, port, proto, type, login, result).toString().getBytes();
+        Path path = Paths.get("../../logs.json");
+        byte[] toWrite = logger.reqToJson(host, port, proto, type, login, result).getBytes();
         Files.write(path.getFileName(), toWrite, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
 }

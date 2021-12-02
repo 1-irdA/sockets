@@ -1,4 +1,4 @@
-package _1irda.socket.models.logger;
+package _1irda.socket.models;
 
 public class Log {
 
