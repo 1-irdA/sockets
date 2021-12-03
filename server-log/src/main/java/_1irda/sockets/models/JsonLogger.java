@@ -24,13 +24,13 @@ public class JsonLogger {
      */
     private String reqToJson(String host, int port, String proto, String type, String login, String result) {
         return new JSONObject()
-                .append("host", host)
-                .append("port", port)
-                .append("proto", proto)
-                .append("type", type)
-                .append("login", login)
-                .append("result", result)
-                .append("date", new Date().toString())
+                .put("host", host)
+                .put("port", port)
+                .put("proto", proto)
+                .put("type", type)
+                .put("login", login)
+                .put("result", result)
+                .put("date", new Date().toString())
                 .toString()
                 + ",\n";
     }

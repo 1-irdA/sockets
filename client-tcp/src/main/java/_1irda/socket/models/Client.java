@@ -12,8 +12,14 @@ import java.util.Scanner;
 
 public class Client {
 
+    /**
+     * Connection host
+     */
     private final String host;
 
+    /**
+     * Connection port
+     */
     private final int port;
 
     public Client(String host, int port) {
@@ -21,6 +27,9 @@ public class Client {
         this.port = port;
     }
 
+    /**
+     * Client interaction with server
+     */
     public void loop() {
 
         Scanner scanner = new Scanner(System.in);
@@ -48,7 +57,7 @@ public class Client {
 
                     /* set username if response if 'GOOD' (only on auth) */
                     if (response.getStatus().equals(Status.GOOD.getValue())) {
-                        user.setUsername(response.getUsername());
+                        user.setUsername(response.getToken());
                     }
                     System.out.println(response.getStatus());
                 }
@@ -63,6 +72,11 @@ public class Client {
         scanner.close();
     }
 
+    /**
+     * Read user input
+     * @param input user input
+     * @return input
+     */
     private String read(BufferedReader input) {
         String data = "";
 
@@ -74,6 +88,12 @@ public class Client {
         return data;
     }
 
+    /**
+     * Build payload to send at server
+     * @param input user input
+     * @param user user
+     * @return well formatted payload
+     */
     private String buildPayload(String input, User user) {
         return input +
                 " " +

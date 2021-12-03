@@ -17,7 +17,7 @@ public class ListAuth {
      */
     public ListAuth() {
         authEntries = new HashMap<>();
-        // add tests entries
+        /* add tests entries */
         authEntries.put("Toto", "Toto");
         authEntries.put("Titi", "Titi");
         authEntries.put("Tata", "Tata");

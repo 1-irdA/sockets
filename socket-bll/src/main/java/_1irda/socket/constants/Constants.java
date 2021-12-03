@@ -8,6 +8,11 @@ public class Constants {
     public static final String CMD_PATTERN = "^(ADD|CHK|DEL|MOD)";
 
     /**
+     * Pattern to get resp pattern
+     */
+    public static final String RESP_PATTERN = "[^\s]+";
+
+    /**
      * Pattern to get token
      */
     public static final String TOKEN_PATTERN = "[^:]*$";

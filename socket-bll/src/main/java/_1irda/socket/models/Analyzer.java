@@ -48,12 +48,12 @@ public class Analyzer {
     public static String[] extractInfos(String data) {
         Matcher matcherCmd = Pattern.compile(CMD_PATTERN).matcher(data);
         Matcher matcherToken = Pattern.compile(TOKEN_PATTERN).matcher(data);
-        String command = matcherCmd.find() ? matcherCmd.group(0) : "";
-        String token = matcherToken.find() ? matcherToken.group(0) : TOKEN;
+        String command = matcherCmd.find() ? matcherCmd.group() : "";
+        String token = matcherToken.find() ? matcherToken.group() : TOKEN;
         String loginPass = data.substring(command.length(), data.indexOf(TOKEN));
         Matcher matcherLoginPass = Pattern.compile(LOGIN_PASS_PATTERN).matcher(loginPass);
-        String login = matcherLoginPass.find() ? matcherLoginPass.group(0) : "";
-        String password = matcherLoginPass.find() ? matcherLoginPass.group(0) : "";
+        String login = matcherLoginPass.find() ? matcherLoginPass.group() : "";
+        String password = matcherLoginPass.find() ? matcherLoginPass.group() : "";
         return new String[] {command, login, password, token};
     }
 
@@ -65,7 +65,7 @@ public class Analyzer {
      * @return error message
      */
     private String error() {
-        return Status.ERROR.getValue() + " Unknown command or auth required to ADD, DEL, MOD";
+        return Status.ERROR.getValue() + " unknown command or auth required to ADD, DEL, MOD";
     }
 
     /**
