@@ -12,5 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: fr.adrien:socket-bll:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20210307" level="project" />
+    <orderEntry type="library" name="Maven: fr.adrien:client-log:1.0-SNAPSHOT" level="project" />
   </component>
 </module>

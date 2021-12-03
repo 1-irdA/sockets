@@ -14,5 +14,13 @@
     </properties>
 
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.adrien</groupId>
+            <artifactId>socket-bll</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
     
 </project>

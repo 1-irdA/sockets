@@ -1,15 +1,15 @@
 package _1irda.socket.enums;
 
-public enum Response {
+public enum Status {
 
     GOOD("GOOD"),
     BAD("BAD"),
     DONE("DONE"),
     ERROR("ERROR");
 
-    private String value;
+    private final String value;
 
-    Response(String value) {
+    Status(String value) {
         this.value = value;
     }
 

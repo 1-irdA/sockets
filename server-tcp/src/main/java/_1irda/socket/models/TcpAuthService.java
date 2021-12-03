@@ -1,5 +1,8 @@
 package _1irda.socket.models;
 
+import _1irda.socket.models.communication.Request;
+import _1irda.socket.models.communication.Response;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,14 +14,14 @@ public class TcpAuthService implements Runnable {
 
     private final Analyzer analyzer;
 
-    private final boolean isManager;
-
     private final int port;
 
-    public TcpAuthService(boolean isManager, int port, Analyzer analyzer) {
-        this.isManager = isManager;
+    private final ClientLog clientLog;
+
+    public TcpAuthService(int port, Analyzer analyzer, ClientLog clientLog) {
         this.port = port;
         this.analyzer = analyzer;
+        this.clientLog = clientLog;
     }
 
     public void listen() {
@@ -31,15 +34,22 @@ public class TcpAuthService implements Runnable {
                     Socket socket = serverSocket.accept();
                     BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     PrintStream output = new PrintStream(socket.getOutputStream());
-                    String request = "";
+                    String clientData = "";
 
-                    while (request != null) {
+                    while (clientData != null) {
                         /* read client request */
-                        request = input.readLine();
+                        clientData = input.readLine();
 
-                        if (request != null) {
+                        if (clientData != null) {
+                            /* build request */
+                            Request request = new Request(clientData);
+
                             /* get response */
-                            String response = analyzer.checkCommand(request, isManager);
+                            String data = analyzer.checkCommand(request.toString());
+
+                            Response response = new Response(data);
+
+                            clientLog.send(socket,"TCP", request, response);
 
                             /* send response */
                             output.println(response);

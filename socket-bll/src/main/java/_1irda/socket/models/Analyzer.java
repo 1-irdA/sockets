@@ -1,70 +1,114 @@
 package _1irda.socket.models;
 
-import _1irda.socket.enums.Response;
-import _1irda.socket.models.ListAuth;
+import _1irda.socket.enums.Status;
+import _1irda.socket.models.communication.Response;
+import _1irda.socket.models.db.ListAuth;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static _1irda.socket.constants.Constants.*;
 
 public class Analyzer {
 
+    /**
+     * Contains login, password and methods to manage them
+     */
     private final ListAuth listAuth;
 
+    /**
+     * @param listAuth contains login, password and method to manage them
+     */
     public Analyzer(ListAuth listAuth) {
         this.listAuth = listAuth;
     }
 
-    private String getCommand(String[] items) {
-        return items.length == 3 ? items[0] : "";
-    }
-
-    public String checkCommand(String data, boolean isManager) {
-        String[] items = data.split(" ");
-        String command = getCommand(items);
+    /**
+     * Launch operation following command in string
+     * @param data to analyse
+     * @return the result of the operation or error
+     */
+    public String checkCommand(String data) {
+        String[] items = extractInfos(convertData(data));
+        boolean isManager = !items[TOKEN_INDEX].isEmpty();
         String result = error();
 
-        if (command.equals("CHK")) {
-            result = checkLoginPassword(items);
-        } else if (command.equals("ADD") && isManager) {
+        if (items[CMD_INDEX].equals("CHK")) {
+            result = new Response(checkLoginPassword(items) + " " + items[LOGIN_INDEX]).toString();
+        } else if (items[CMD_INDEX].equals("ADD") && isManager) {
             result = addLoginPassword(items);
-        } else if (command.equals("DEL") && isManager) {
+        } else if (items[CMD_INDEX].equals("DEL") && isManager) {
             result = deleteLoginPassword(items);
-        } else if (command.equals("MOD") && isManager) {
+        } else if (items[CMD_INDEX].equals("MOD") && isManager) {
             result = updatePassword(items);
         }
-        return result;
+        return result.trim();
     }
 
+    public static String[] extractInfos(String data) {
+        Matcher matcherCmd = Pattern.compile(CMD_PATTERN).matcher(data);
+        Matcher matcherToken = Pattern.compile(TOKEN_PATTERN).matcher(data);
+        String command = matcherCmd.find() ? matcherCmd.group() : "";
+        String token = matcherToken.find() ? matcherToken.group() : TOKEN;
+        String loginPass = data.substring(command.length(), data.indexOf(TOKEN));
+        Matcher matcherLoginPass = Pattern.compile(LOGIN_PASS_PATTERN).matcher(loginPass);
+        String login = matcherLoginPass.find() ? matcherLoginPass.group() : "";
+        String password = matcherLoginPass.find() ? matcherLoginPass.group() : "";
+        return new String[] {command, login, password, token};
+    }
+
+    private String convertData(String data) {
+        return data.contains(TOKEN) ? data : data + TOKEN;
+    }
+
+    /**
+     * @return error message
+     */
     private String error() {
-        return Response.ERROR.getValue() + " Unknown command or auth required to ADD, DEL, MOD";
+        return Status.ERROR.getValue() + " unknown command or auth required to ADD, DEL, MOD";
     }
 
+    /**
+     * Check if the couple of login / password are in list
+     * @param items [command, login, password, token]
+     * @return 'GOOD' if in, 'BAD' else
+     */
     private String checkLoginPassword(String[] items) {
-        return isGoodLoginPassword(items) ? Response.GOOD.getValue() : Response.BAD.getValue();
+        return listAuth.test(items[LOGIN_INDEX], items[PASSWORD_INDEX])
+                ? Status.GOOD.getValue()
+                : Status.BAD.getValue();
     }
 
-    private boolean isGoodLoginPassword(String[] items) {
-        return listAuth.test(items[1], items[2]);
-    }
-
+    /**
+     * Add a login / password in list
+     * @param items [command, login, password, token]
+     * @return 'DONE' if added, 'ERROR' else
+     */
     private String addLoginPassword(String[] items) {
-        return add(items) ? Response.DONE.getValue() : Response.ERROR.getValue() + " cannot be added";
+        return listAuth.create(items[LOGIN_INDEX], items[PASSWORD_INDEX])
+                ? Status.DONE.getValue()
+                : Status.ERROR.getValue() + " cannot be added";
     }
 
+    /**
+     * Delete login password
+     * @param items [command, login, password, token]
+     * @return 'DONE' if deleted, 'ERROR' else
+     */
     private String deleteLoginPassword(String[] items) {
-        return delete(items) ? Response.DONE.getValue() : Response.ERROR.getValue() + " cannot be deleted";
+        return  listAuth.delete(items[LOGIN_INDEX], items[PASSWORD_INDEX])
+                ? Status.DONE.getValue()
+                : Status.ERROR.getValue() + " cannot be deleted";
     }
 
+    /**
+     * Update password with login and new password
+     * @param items [command, login, password, token]
+     * @return 'DONE' if updated, 'ERROR' else
+     */
     private String updatePassword(String[] items) {
-        return update(items) ? Response.DONE.getValue() : Response.ERROR.getValue() + " cannot be updated";
-    }
-
-    private boolean add(String[] items) {
-        return listAuth.create(items[1], items[2]);
-    }
-
-    private boolean delete(String[] items) {
-        return listAuth.delete(items[1], items[2]);
-    }
-
-    private boolean update(String[] items) {
-        return listAuth.update(items[1], items[2]);
+        return listAuth.update(items[LOGIN_INDEX], items[PASSWORD_INDEX])
+                ? Status.DONE.getValue()
+                : Status.ERROR.getValue() + " cannot be updated";
     }
 }

@@ -2,13 +2,13 @@ package _1irda.socket.models;
 
 public class Server {
 
-    private UdpAuthService updServer;
+    private final UdpAuthService updServer;
 
-    private TcpAuthService tcpServer;
+    private final TcpAuthService tcpServer;
 
-    public Server(int port, boolean isManager, Analyzer analyzer) {
-        this.updServer = new UdpAuthService(isManager, port, analyzer);
-        this.tcpServer = new TcpAuthService(isManager, port, analyzer);
+    public Server(int port, Analyzer analyzer) {
+        this.updServer = new UdpAuthService(port, analyzer);
+        this.tcpServer = new TcpAuthService(port, analyzer);
     }
 
     public void listen() {
