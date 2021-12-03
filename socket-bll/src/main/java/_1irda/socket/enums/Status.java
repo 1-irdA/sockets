@@ -7,7 +7,7 @@ public enum Status {
     DONE("DONE"),
     ERROR("ERROR");
 
-    private String value;
+    private final String value;
 
     Status(String value) {
         this.value = value;

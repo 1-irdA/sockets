@@ -1,8 +1,11 @@
 package _1irda.socket.models.communication;
 
-import _1irda.socket.enums.Command;
+import _1irda.socket.models.Analyzer;
 
-import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static _1irda.socket.constants.Constants.*;
 
 /**
  * Request class
@@ -12,36 +15,29 @@ public class Request {
     /**
      * Sent command
      */
-    private String command;
+    private final String command;
 
     /**
      * Sent login
      */
-    private String login;
+    private final String login;
 
     /**
      * Sent password
      */
-    private String password;
+    private final String password;
 
     /**
      * Token
      */
-    private String token;
+    private final String token;
 
     public Request(String data) {
-        String[] items = data.split(" ");
-
-        /* command login password token:{""|username} */
-        if (items.length == 4) {
-            this.command = Arrays.stream(Command.values())
-                    .map(c -> c.getValue())
-                    .toList()
-                    .contains(items[0]) ? items[0] : "";
-            this.login = items[1];
-            this.password = items[2];
-            this.token = items[3];
-        }
+        String[] items = Analyzer.extractInfos(data);
+        command = items[CMD_INDEX];
+        login = items[LOGIN_INDEX];
+        password = items[PASSWORD_INDEX];
+        token = items[TOKEN_INDEX];
     }
 
     public String getCommand() {

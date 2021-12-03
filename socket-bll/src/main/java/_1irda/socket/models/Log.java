@@ -1,5 +1,8 @@
 package _1irda.socket.models;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Log {
 
     /**
@@ -33,11 +36,12 @@ public class Log {
     private final String result;
 
     public Log(String[] items) {
+        Matcher tokenMatcher = Pattern.compile("[^:]*$").matcher(items[4]);
         host = items[0];
         port = Integer.parseInt(items[1]);
         proto = items[2];
         type = items[3];
-        login = items[4];
+        login = tokenMatcher.find() ? tokenMatcher.group(0) : "";
         result = items[5];
     }
 

@@ -11,12 +11,21 @@ import java.net.Socket;
 
 public class TcpLogger implements Runnable {
 
+    /**
+     * Listen port
+     */
     private final int port;
 
+    /**
+     * @param port listen
+     */
     public TcpLogger(int port) {
         this.port = port;
     }
 
+    /**
+     * Server listen
+     */
     public void listen() {
 
         try {
