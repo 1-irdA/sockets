@@ -1,5 +1,8 @@
 package _1irda.socket.models;
 
+import _1irda.socket.models.communication.Request;
+import _1irda.socket.models.communication.Response;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -7,31 +10,28 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
 
-public class UdpAuthService implements Runnable {
+public class UdpAuthService extends Thread {
 
     private DatagramSocket socket;
 
-    private int port;
+    private final int port;
 
-    private Analyzer analyzer;
+    private final Analyzer analyzer;
 
+    private final ClientLog clientLog;
 
-
-    public UdpAuthService(int port, Analyzer analyzer) {
+    public UdpAuthService(int port, Analyzer analyzer, ClientLog clientLog) {
         this.port = port;
         this.analyzer = analyzer;
+        this.clientLog = clientLog;
     }
 
-    private Request receive() throws IOException {
-        DatagramPacket dgram = null;
-        String reception = null;
+    private UdpRequest receive() throws IOException {
         byte[] buffer = new byte[1024];
-
-        dgram = new DatagramPacket(buffer, buffer.length);
+        DatagramPacket dgram = new DatagramPacket(buffer, buffer.length);
         socket.receive(dgram);
-        reception = new String(dgram.getData(), 0, dgram.getLength());
-
-        return new Request(reception, dgram.getAddress(), dgram.getPort());
+        String reception = new String(dgram.getData(), 0, dgram.getLength());
+        return new UdpRequest(reception, dgram.getAddress(), dgram.getPort());
     }
 
     private void send(String msg, InetAddress address, int port) throws IOException {
@@ -40,19 +40,29 @@ public class UdpAuthService implements Runnable {
     }
 
     public void listen() {
-
         try {
             socket = new DatagramSocket(port);
 
             try {
                 while (true) {
                     /* wait en receive */
-                    Request request = receive();
+                    UdpRequest updRequest = receive();
+
+                    /* extract command login password token  */
+                    Request request = new Request(updRequest.getPayload());
 
                     /* extract data and check */
-                    String result = this.analyzer.checkCommand(request.getPayload());
+                    String result = this.analyzer.checkCommand(updRequest.getPayload());
 
-                    send(result, request.getAddress(), request.getPort());
+                    Response response = new Response(result);
+
+                    clientLog.send(updRequest.getInetAddress(),
+                            updRequest.getPort(),
+                            "UDP",
+                            request,
+                            response);
+
+                    send(result, updRequest.getInetAddress(), updRequest.getPort());
                 }
             } catch (IOException e) {
                 System.err.println(e.getMessage());

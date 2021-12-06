@@ -31,7 +31,7 @@ public class ListAuth {
      * @return true if added
      */
     public synchronized boolean create(String login, String passwd) {
-        if(authEntries.containsKey(login)) {
+        if (authEntries.containsKey(login)) {
             return false;
         }
         return authEntries.put(login, passwd) == null;
@@ -44,7 +44,7 @@ public class ListAuth {
      * @return true if updated
      */
     public synchronized boolean update(String login, String passwd) {
-        if(!authEntries.containsKey(login)) {
+        if (!authEntries.containsKey(login)) {
             return false;
         }
         String oldPass = authEntries.get(login);
@@ -58,7 +58,7 @@ public class ListAuth {
      * @return true if deleted
      */
     public synchronized boolean delete(String login, String passwd) {
-        if(!test(login, passwd)) {
+        if (!testLoginPassword(login, passwd)) {
             return false;
         }
         return authEntries.remove(login).equals(passwd);
@@ -70,10 +70,19 @@ public class ListAuth {
      * @param passwd : password
      * @return true if is valid login and password
      */
-    public synchronized boolean test(String login, String passwd) {
-        if(!authEntries.containsKey(login)) {
+    public synchronized boolean testLoginPassword(String login, String passwd) {
+        if (!authEntries.containsKey(login)) {
             return false;
         }
         return authEntries.get(login).equals(passwd);
+    }
+
+    /**
+     * Test login
+     * @param login user login
+     * @return true if is in db
+     */
+    public synchronized boolean testLogin(String login) {
+        return authEntries.containsKey(login);
     }
 }

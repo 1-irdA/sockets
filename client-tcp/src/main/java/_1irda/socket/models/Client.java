@@ -1,5 +1,7 @@
 package _1irda.socket.models;
 
+import static _1irda.socket.constants.Constants.TOKEN_DELIMITER;
+
 import _1irda.socket.enums.Status;
 import _1irda.socket.models.communication.Response;
 
@@ -97,7 +99,7 @@ public class Client {
     private String buildPayload(String input, User user) {
         return input +
                 " " +
-                "token:" +
+                TOKEN_DELIMITER +
                 user.getUsername();
     }
 }

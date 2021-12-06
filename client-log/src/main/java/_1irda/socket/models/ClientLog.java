@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.net.InetAddress;
 import java.net.Socket;
 
 public class ClientLog {
@@ -27,14 +28,14 @@ public class ClientLog {
      * @param request user request
      * @param response server response
      */
-    public void send(Socket sock, String proto, Request request, Response response) {
+    public void send(InetAddress address, int port, String proto, Request request, Response response) {
         try {
             Socket socket = new Socket(host, port);
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintStream output = new PrintStream(socket.getOutputStream());
-            String toLog = sock.getInetAddress().toString() +
+            String toLog = address.toString() +
                     " " +
-                    sock.getPort() +
+                    port +
                     " " +
                     proto +
                     " " +

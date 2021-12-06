@@ -5,16 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="485649e7-f9f3-481a-9e4c-9b78ed74e8b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../server-udp/.idea/libraries/Maven__fr_adrien_client_log_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/test/java/_1irda/socket/models/AnalyzerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/src/test/java/_1irda/socket/models/db/ListAuthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.AnalyzerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.db.ListAuthTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.AnalyzerTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.db.ListAuthTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-log/src/main/java/_1irda/socket/models/ClientLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-log/src/main/java/_1irda/socket/models/ClientLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-tcp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_1irda/sockets/models/JsonLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_1irda/sockets/models/JsonLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp/src/main/java/_1irda/socket/models/TcpAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/src/main/java/_1irda/socket/models/TcpAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/server-udp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/server-udp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/src/main/java/_1irda/socket/models/UdpAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/constants/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/db/ListAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/db/ListAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +115,7 @@
       <workItem from="1638528540383" duration="18000" />
       <workItem from="1638546261484" duration="1281000" />
       <workItem from="1638552176103" duration="955000" />
+      <workItem from="1638809527583" duration="604000" />
     </task>
     <servers />
   </component>

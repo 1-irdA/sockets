@@ -30,7 +30,7 @@ public class Analyzer {
      */
     public String checkCommand(String data) {
         String[] items = extractInfos(convertData(data));
-        boolean isManager = !items[TOKEN_INDEX].isEmpty();
+        boolean isManager = listAuth.testLogin(items[TOKEN_INDEX]);
         String result = error();
 
         if (items[CMD_INDEX].equals("CHK")) {
@@ -49,8 +49,8 @@ public class Analyzer {
         Matcher matcherCmd = Pattern.compile(CMD_PATTERN).matcher(data);
         Matcher matcherToken = Pattern.compile(TOKEN_PATTERN).matcher(data);
         String command = matcherCmd.find() ? matcherCmd.group() : "";
-        String token = matcherToken.find() ? matcherToken.group() : TOKEN;
-        String loginPass = data.substring(command.length(), data.indexOf(TOKEN));
+        String token = matcherToken.find() ? matcherToken.group() : TOKEN_DELIMITER;
+        String loginPass = data.substring(command.length(), data.indexOf(TOKEN_DELIMITER));
         Matcher matcherLoginPass = Pattern.compile(LOGIN_PASS_PATTERN).matcher(loginPass);
         String login = matcherLoginPass.find() ? matcherLoginPass.group() : "";
         String password = matcherLoginPass.find() ? matcherLoginPass.group() : "";
@@ -58,7 +58,7 @@ public class Analyzer {
     }
 
     private String convertData(String data) {
-        return data.contains(TOKEN) ? data : data + TOKEN;
+        return data.contains(TOKEN_DELIMITER) ? data : data + TOKEN_DELIMITER;
     }
 
     /**
@@ -74,7 +74,7 @@ public class Analyzer {
      * @return 'GOOD' if in, 'BAD' else
      */
     private String checkLoginPassword(String[] items) {
-        return listAuth.test(items[LOGIN_INDEX], items[PASSWORD_INDEX])
+        return listAuth.testLoginPassword(items[LOGIN_INDEX], items[PASSWORD_INDEX])
                 ? Status.GOOD.getValue()
                 : Status.BAD.getValue();
     }

@@ -33,7 +33,7 @@ public class Request {
         command = items[CMD_INDEX];
         login = items[LOGIN_INDEX];
         password = items[PASSWORD_INDEX];
-        token = TOKEN + items[TOKEN_INDEX];
+        token = TOKEN_DELIMITER + items[TOKEN_INDEX];
     }
 
     public String getCommand() {
