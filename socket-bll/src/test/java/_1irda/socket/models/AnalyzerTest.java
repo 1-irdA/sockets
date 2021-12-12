@@ -23,12 +23,12 @@ public class AnalyzerTest {
 
     @Test
     public void checkCommandTestBad() {
-        assertEquals("BAD token:", analyzer.checkCommand("CHK Adri irdA"));
+        assertEquals("BAD", analyzer.checkCommand("CHK Adri irdA"));
     }
 
     @Test
     public void checkCommandTestGood() {
-        assertEquals("GOOD token:Titi", analyzer.checkCommand("CHK Titi Titi"));
+        assertEquals("GOOD Titi", analyzer.checkCommand("CHK Titi Titi"));
     }
 
     @Test

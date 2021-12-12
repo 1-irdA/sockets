@@ -16,12 +16,12 @@ public class ListAuthTest {
 
     @Test
     public void testCreateOk() {
-        assertNotNull(listAuth.create("", ""));
+        assertTrue(listAuth.create("", ""));
     }
 
     @Test
     public void testCreateNotOk() {
-        assertNotNull(listAuth.create("Titi", "Titi"));
+        assertFalse(listAuth.create("Titi", "Titi"));
     }
 
     @Test

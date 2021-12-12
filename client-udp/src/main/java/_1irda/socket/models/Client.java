@@ -62,11 +62,11 @@ public class Client {
 
                     Response response = new Response(extractReceivedData(reception));
 
-                    /* set username if response if 'GOOD' (only on auth) */
+                    /* set username if response equals 'GOOD' (only on auth) */
                     if (response.getStatus().equals(Status.GOOD.getValue())) {
                         user.setUsername(response.getToken());
                     }
-                    System.out.println(response);
+                    System.out.println(response.getStatus());
 
                     /*
                      * replace buffer size at max

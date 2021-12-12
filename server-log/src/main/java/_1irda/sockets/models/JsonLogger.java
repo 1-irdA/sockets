@@ -12,6 +12,8 @@ import java.util.Date;
  */
 public class JsonLogger {
 
+    private static final String LOGS_PATH = "../../logs.json";
+
     /**
      * Transform request to json
      * @param host client host
@@ -62,7 +64,7 @@ public class JsonLogger {
      */
     public static void log(String host, int port, String proto, String type, String login, String result) throws IOException {
         JsonLogger logger = getLogger();
-        Path path = Paths.get("../../logs.json");
+        Path path = Paths.get(LOGS_PATH);
         byte[] toWrite = logger.reqToJson(host, port, proto, type, login, result).getBytes();
         Files.write(path.getFileName(), toWrite, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }

@@ -28,8 +28,8 @@ public class Response {
      */
     public Response(String data) {
         Matcher matcherResp = Pattern.compile(RESP_PATTERN).matcher(data);
-        status = matcherResp.find() ? matcherResp.group() : "";
-        token = matcherResp.find() ? matcherResp.group() : "";
+        status = matcherResp.find() ? matcherResp.group().trim() : "";
+        token = matcherResp.find() ? matcherResp.group().trim() : "";
 
         if (status.equals(Status.ERROR.getValue())) {
             status = data;
@@ -48,6 +48,6 @@ public class Response {
 
     @Override
     public String toString() {
-        return status + " " + TOKEN_DELIMITER + token;
+        return status + " " + token;
     }
 }

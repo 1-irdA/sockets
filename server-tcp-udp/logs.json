@@ -1,0 +1,6 @@
+{"result":"GOOD","date":"Mon Dec 13 00:25:02 CET 2021","port":58037,"proto":"TCP","host":"/127.0.0.1","type":"CHK","login":""},
+{"result":"GOOD","date":"Mon Dec 13 00:25:15 CET 2021","port":60358,"proto":"UDP","host":"/127.0.0.1","type":"CHK","login":""},
+{"result":"DONE","date":"Mon Dec 13 00:25:21 CET 2021","port":58037,"proto":"TCP","host":"/127.0.0.1","type":"ADD","login":"Toto"},
+{"result":"GOOD","date":"Mon Dec 13 00:25:28 CET 2021","port":60358,"proto":"UDP","host":"/127.0.0.1","type":"CHK","login":"Titi"},
+{"result":"DONE","date":"Mon Dec 13 00:25:33 CET 2021","port":60358,"proto":"UDP","host":"/127.0.0.1","type":"ADD","login":"Adri"},
+{"result":"DONE","date":"Mon Dec 13 00:25:41 CET 2021","port":60358,"proto":"UDP","host":"/127.0.0.1","type":"MOD","login":"Adri"},

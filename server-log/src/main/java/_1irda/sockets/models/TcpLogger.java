@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TcpLogger implements Runnable {
+public class TcpLogger extends Thread {
 
     /**
      * Listen port

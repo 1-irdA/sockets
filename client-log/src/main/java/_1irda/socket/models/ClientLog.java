@@ -23,27 +23,30 @@ public class ClientLog {
 
     /**
      * Send to log server
-     * @param sock client
+     * @param address client address
+     * @param clientPort client port
      * @param proto protocol
-     * @param request user request
-     * @param response server response
+     * @param request request type
+     * @param response response type
      */
-    public void send(InetAddress address, int port, String proto, Request request, Response response) {
+    public void send(InetAddress address, int clientPort, String proto, Request request, Response response) {
         try {
             Socket socket = new Socket(host, port);
             BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintStream output = new PrintStream(socket.getOutputStream());
-            String toLog = address.toString() +
-                    " " +
-                    port +
-                    " " +
-                    proto +
-                    " " +
-                    request.getCommand() +
-                    " " +
-                    request.getToken() +
-                    " " +
-                    response.getStatus();
+            String toLog = new StringBuilder()
+                    .append(address.toString())
+                    .append(" ")
+                    .append(clientPort)
+                    .append(" ")
+                    .append(proto)
+                    .append(" ")
+                    .append(request.getCommand())
+                    .append(" ")
+                    .append(request.getToken())
+                    .append(" ")
+                    .append(response.getStatus())
+                    .toString();
 
             output.println(toLog);
 
