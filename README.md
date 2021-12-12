@@ -10,21 +10,21 @@ Several projects who works together with Maven.
 
 - server-log works with TCP and log all users actions
 
-# run udp and tcp
+## run udp and tcp
 
 Launch :      
 - server-tcp-udp
 - client-tcp
 - client-udp
 
-# run only tcp
+## run only tcp
 
 Launch :    
 - server-tcp
 - server-log
 - client-tcp
 
-# run only udp
+## run only udp
 
 Launch :    
 - server-udp
