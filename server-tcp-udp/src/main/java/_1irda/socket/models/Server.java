@@ -1,18 +1,27 @@
 package _1irda.socket.models;
 
+import _1irda.sockets.models.TcpLogger;
+
 public class Server {
 
     private final UdpAuthService updServer;
 
     private final TcpAuthService tcpServer;
 
-    public Server(int port, Analyzer analyzer) {
-        this.updServer = new UdpAuthService(port, analyzer);
-        this.tcpServer = new TcpAuthService(port, analyzer);
+    private final TcpLogger tcpLogger;
+
+    private final ClientLog clientLog;
+
+    public Server(UdpAuthService udpServer, TcpAuthService tcpServer, TcpLogger tcpLogger, ClientLog clientLog) {
+        this.updServer = udpServer;
+        this.tcpServer = tcpServer;
+        this.tcpLogger = tcpLogger;
+        this.clientLog = clientLog;
     }
 
     public void listen() {
-        new Thread(tcpServer).start();
-        new Thread(updServer).start();
+        tcpServer.start();
+        updServer.start();
+        tcpLogger.start();
     }
 }

@@ -1,9 +1,12 @@
 package _1irda.socket.models;
 
 import _1irda.socket.enums.Status;
+import _1irda.socket.models.communication.Response;
 
 import java.net.*;
 import java.util.Scanner;
+
+import static _1irda.socket.constants.Constants.TOKEN_DELIMITER;
 
 public class Client {
 
@@ -50,10 +53,8 @@ public class Client {
                 data = scanner.nextLine();
 
                 if (!data.equalsIgnoreCase(("stop"))) {
-
+                    /* construct data to send */
                     byte[] payload = buildPayload(data, user);
-
-                    /* get bytes and send data */
                     send(payload, destination);
 
                     /* wait and receive server data */
@@ -61,11 +62,11 @@ public class Client {
 
                     Response response = new Response(extractReceivedData(reception));
 
-                    /* set username if response if 'GOOD' (only on auth) */
+                    /* set username if response equals 'GOOD' (only on auth) */
                     if (response.getStatus().equals(Status.GOOD.getValue())) {
-                        user.setUsername(response.getUsername());
+                        user.setUsername(response.getToken());
                     }
-                    System.out.println(response);
+                    System.out.println(response.getStatus());
 
                     /*
                      * replace buffer size at max
@@ -84,7 +85,7 @@ public class Client {
         return new StringBuilder()
                 .append(input)
                 .append(" ")
-                .append("token:")
+                .append(TOKEN_DELIMITER)
                 .append(user.getUsername())
                 .toString()
                 .getBytes();

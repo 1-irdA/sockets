@@ -1,5 +1,7 @@
 package _1irda.socket.models;
 
+import static _1irda.socket.constants.Constants.TOKEN_DELIMITER;
+
 import _1irda.socket.enums.Status;
 import _1irda.socket.models.communication.Response;
 
@@ -44,7 +46,7 @@ public class Client {
             System.out.println("Input sentences or 'stop'");
 
             do {
-                System.out.print("> " );
+                System.out.print("> ");
                 data = scanner.nextLine();
 
                 /* send input to server */
@@ -55,13 +57,13 @@ public class Client {
                     /* read server data and print */
                     Response response = new Response(read(input));
 
-                    /* set username if response if 'GOOD' (only on auth) */
+                    /* set username if response equals 'GOOD' (only on auth) */
                     if (response.getStatus().equals(Status.GOOD.getValue())) {
                         user.setUsername(response.getToken());
                     }
                     System.out.println(response.getStatus());
                 }
-            } while (!data.equalsIgnoreCase("stop" ));
+            } while (!data.equalsIgnoreCase("stop"));
 
             socket.close();
             input.close();
@@ -97,7 +99,7 @@ public class Client {
     private String buildPayload(String input, User user) {
         return input +
                 " " +
-                "token:" +
+                TOKEN_DELIMITER +
                 user.getUsername();
     }
 }

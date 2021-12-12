@@ -1,7 +1,0 @@
-{"result":"ERROR","date":"Fri Dec 03 18:32:50 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"ADD","login":""},
-{"result":"BAD","date":"Fri Dec 03 18:32:55 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"CHK","login":""},
-{"result":"GOOD","date":"Fri Dec 03 18:33:02 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"CHK","login":""},
-{"result":"DONE","date":"Fri Dec 03 18:33:07 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"ADD","login":"Toto"},
-{"result":"DONE","date":"Fri Dec 03 18:33:16 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"MOD","login":"Toto"},
-{"result":"GOOD","date":"Fri Dec 03 18:33:22 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"CHK","login":"Toto"},
-{"result":"DONE","date":"Fri Dec 03 18:33:28 CET 2021","port":54524,"proto":"TCP","host":"/127.0.0.1","type":"DEL","login":"Adri"},

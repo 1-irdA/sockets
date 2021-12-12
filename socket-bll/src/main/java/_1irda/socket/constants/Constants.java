@@ -25,7 +25,7 @@ public class Constants {
     /**
      * Token delimiter
      */
-    public static final String TOKEN = "token:";
+    public static final String TOKEN_DELIMITER = "token:";
 
     /**
      * Command index in items

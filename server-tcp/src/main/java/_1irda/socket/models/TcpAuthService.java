@@ -10,7 +10,7 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TcpAuthService implements Runnable {
+public class TcpAuthService extends Thread {
 
     private final Analyzer analyzer;
 
@@ -49,7 +49,7 @@ public class TcpAuthService implements Runnable {
 
                             Response response = new Response(data);
 
-                            clientLog.send(socket,"TCP", request, response);
+                            clientLog.send(socket.getInetAddress(), socket.getPort(), "TCP", request, response);
 
                             /* send response */
                             output.println(response);
