@@ -22,7 +22,7 @@ public class Main {
         UdpAuthService udpAuthService = new UdpAuthService(SERVER_PORT, analyzer, clientLog);
         TcpAuthService tcpAuthService = new TcpAuthService(SERVER_PORT, analyzer, clientLog);
         TcpLogger tcpLogger = new TcpLogger(LOGGER_PORT);
-        Server server = new Server(udpAuthService, tcpAuthService, tcpLogger, clientLog);
+        Server server = new Server(udpAuthService, tcpAuthService, tcpLogger);
         server.listen();
     }
 }

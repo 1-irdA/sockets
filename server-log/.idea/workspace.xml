@@ -5,52 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="485649e7-f9f3-481a-9e4c-9b78ed74e8b4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Réseaux.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-log/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-log/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-log/src/main/java/_1irda/socket/models/ClientLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-log/src/main/java/_1irda/socket/models/ClientLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-log/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../client-log/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-tcp/.idea/libraries/Maven__org_json_json_20210307.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-tcp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-tcp/client-tcp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/client-tcp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-tcp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../client-tcp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/src/main/java/_1irda/socket/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../client-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/logs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/logs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/libraries/Maven__org_json_json_20210307.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/server-tcp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/server-tcp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-udp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../server-udp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/enums/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/enums/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.AnalyzerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.AnalyzerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.db.ListAuthTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.db.ListAuthTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.AnalyzerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.AnalyzerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.db.ListAuthTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.db.ListAuthTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +91,7 @@
       <workItem from="1638809527583" duration="604000" />
       <workItem from="1639340723256" duration="7981000" />
       <workItem from="1640036954873" duration="3098000" />
-      <workItem from="1640192034862" duration="2800000" />
+      <workItem from="1640192034862" duration="3452000" />
     </task>
     <servers />
   </component>

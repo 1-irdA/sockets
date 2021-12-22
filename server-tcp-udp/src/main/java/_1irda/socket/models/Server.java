@@ -19,16 +19,10 @@ public class Server {
      */
     private final TcpLogger tcpLogger;
 
-    /**
-     * Send log
-     */
-    private final ClientLog clientLog;
-
-    public Server(UdpAuthService udpServer, TcpAuthService tcpServer, TcpLogger tcpLogger, ClientLog clientLog) {
+    public Server(UdpAuthService udpServer, TcpAuthService tcpServer, TcpLogger tcpLogger) {
         this.updServer = udpServer;
         this.tcpServer = tcpServer;
         this.tcpLogger = tcpLogger;
-        this.clientLog = clientLog;
     }
 
     /**
