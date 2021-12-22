@@ -8,19 +8,14 @@ public class Constants {
     public static final String CMD_PATTERN = "^(ADD|CHK|DEL|MOD)";
 
     /**
-     * Pattern to get resp pattern
+     * Pattern to avoid split string
      */
-    public static final String RESP_PATTERN = "[^\s]+";
+    public static final String SPACES_PATTERN = "[^\s]+";
 
     /**
      * Pattern to get token
      */
     public static final String TOKEN_PATTERN = "[^:]*$";
-
-    /**
-     * Pattern to get login and password separately
-     */
-    public static final String LOGIN_PASS_PATTERN = "[^\s]+";
 
     /**
      * Token delimiter

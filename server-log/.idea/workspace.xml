@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="485649e7-f9f3-481a-9e4c-9b78ed74e8b4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server-tcp-udp/src/main/java/_1irda/socket/models/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/src/main/java/_1irda/socket/models/communication/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.AnalyzerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/TEST-_1irda.socket.models.AnalyzerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.AnalyzerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../socket-bll/target/surefire-reports/_1irda.socket.models.AnalyzerTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

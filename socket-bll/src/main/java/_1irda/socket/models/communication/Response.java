@@ -5,8 +5,7 @@ import _1irda.socket.enums.Status;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static _1irda.socket.constants.Constants.RESP_PATTERN;
-import static _1irda.socket.constants.Constants.TOKEN_DELIMITER;
+import static _1irda.socket.constants.Constants.*;
 
 /**
  * Response class
@@ -27,7 +26,7 @@ public class Response {
      * @param data status + [error message] + [token]
      */
     public Response(String data) {
-        Matcher matcherResp = Pattern.compile(RESP_PATTERN).matcher(data);
+        Matcher matcherResp = Pattern.compile(SPACES_PATTERN).matcher(data);
         status = matcherResp.find() ? matcherResp.group().trim() : "";
         token = matcherResp.find() ? matcherResp.group().trim() : "";
 

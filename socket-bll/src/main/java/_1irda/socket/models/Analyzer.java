@@ -51,7 +51,7 @@ public class Analyzer {
         String command = matcherCmd.find() ? matcherCmd.group() : "";
         String token = matcherToken.find() ? matcherToken.group() : TOKEN_DELIMITER;
         String loginPass = data.substring(command.length(), data.indexOf(TOKEN_DELIMITER));
-        Matcher matcherLoginPass = Pattern.compile(LOGIN_PASS_PATTERN).matcher(loginPass);
+        Matcher matcherLoginPass = Pattern.compile(SPACES_PATTERN).matcher(loginPass);
         String login = matcherLoginPass.find() ? matcherLoginPass.group() : "";
         String password = matcherLoginPass.find() ? matcherLoginPass.group() : "";
         return new String[] {command, login, password, token};
