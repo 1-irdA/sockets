@@ -4,12 +4,24 @@ import _1irda.sockets.models.TcpLogger;
 
 public class Server {
 
+    /**
+     * Udp server
+     */
     private final UdpAuthService updServer;
 
+    /**
+     * Tcp server
+     */
     private final TcpAuthService tcpServer;
 
+    /**
+     * Tcp logger
+     */
     private final TcpLogger tcpLogger;
 
+    /**
+     * Send log
+     */
     private final ClientLog clientLog;
 
     public Server(UdpAuthService udpServer, TcpAuthService tcpServer, TcpLogger tcpLogger, ClientLog clientLog) {
@@ -19,6 +31,9 @@ public class Server {
         this.clientLog = clientLog;
     }
 
+    /**
+     * Multithreaded action
+     */
     public void listen() {
         tcpServer.start();
         updServer.start();

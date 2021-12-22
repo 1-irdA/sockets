@@ -28,6 +28,9 @@ public class Request {
      */
     private final String token;
 
+    /**
+     * @param data contains infos to extract
+     */
     public Request(String data) {
         String[] items = extractInfos(data);
         command = items[CMD_INDEX];

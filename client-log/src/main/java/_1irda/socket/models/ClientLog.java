@@ -12,8 +12,14 @@ import java.net.Socket;
 
 public class ClientLog {
 
+    /**
+     * Connection host
+     */
     private final String host;
 
+    /**
+     * Connection port
+     */
     private final int port;
 
     public ClientLog(String host, int port) {

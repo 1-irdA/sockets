@@ -10,8 +10,14 @@ import static _1irda.socket.constants.Constants.TOKEN_DELIMITER;
 
 public class Client {
 
+    /**
+     * Connection port
+     */
     private final int port;
 
+    /**
+     * Connection host
+     */
     private final String dest;
 
     private DatagramSocket socket;
@@ -29,10 +35,18 @@ public class Client {
         }
     }
 
+    /**
+     * Extract received data from server
+     * @param reception data sent by server
+     * @return data from server to user
+     */
     private String extractReceivedData(DatagramPacket reception) {
         return new String(reception.getData(), 0, reception.getLength());
     }
 
+    /**
+     * Client interaction with server
+     */
     public void loop() {
         Scanner scanner = new Scanner(System.in);
         byte[] buffer = new byte[1024];
@@ -81,6 +95,12 @@ public class Client {
         }
     }
 
+    /**
+     * Build payload sent by user
+     * @param input user input
+     * @param user user
+     * @return data array
+     */
     private byte[] buildPayload(String input, User user) {
         return new StringBuilder()
                 .append(input)
